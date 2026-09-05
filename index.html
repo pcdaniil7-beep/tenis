@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Теніс Онлайн 1v1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/peerjs@1.5.2/dist/peerjs.min.js"></script>
+</head>
+<body>
+    <div id="lobby">
+        <h1>🎾 Теніс Онлайн</h1>
+        <div class="card">
+            <h3>Ваш ID для друга:</h3>
+            <div id="my-id">Завантаження...</div>
+            <button onclick="copyID()">Зберегти ID</button>
+        </div>
+        <div class="card">
+            <h3>Приєднатися до друга:</h3>
+            <input type="text" id="peer-id-input" placeholder="Введіть ID друга">
+            <button onclick="connectToPeer()">Підключитися</button>
+        </div>
+        <div id="status">Очікування підключення...</div>
+    </div>
+
+    <div id="game-container" class="hidden">
+        <div id="scoreboard">
+            <span id="score1">0</span> : <span id="score2">0</span>
+        </div>
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
